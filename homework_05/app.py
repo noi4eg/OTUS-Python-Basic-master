@@ -23,7 +23,7 @@ app.register_blueprint(products_app, url_prefix="/products")
 
 @app.route("/")
 def root():
-    return render_template("index.html")
+    return render_template("base.html")
 
 @app.route("/about/")
 def about():
