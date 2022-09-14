@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}
+Add prod
+{% endblock %}
+
+{% block body %}
+<form method="post">
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Enter</span>
+  <input
+          required
+          type="text"
+          class="form-control"
+          placeholder="Prod name"
+          aria-label="Prod name"
+          aria-describedby="basic-addon1"
+          name="prod-name">
+</div>
+
+
+</div>
+<button class="btn btn-primary" type="submit" value="Add prod">Add prod</button>
+</form>
+  <div>
+    <ul class="list-group">
+  <li class="list-group-item" ><a href="{{ url_for('prods_list') }}">See all prods</a></li>
+  <li class="list-group-item"><a href="{{ url_for('add') }}">Add prod</a></li>
+</ul>
+  </div>
+{% endblock %}

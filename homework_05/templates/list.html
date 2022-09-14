@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title -%}
+Prod list
+{%- endblock %}
+
+{% block body %}
+  <h1>Prods:</h1>
+  {% if prods %}
+    <ul>
+      {% for (prod_id, prod_name) in prods %}
+        <li><a
+          href="{{ url_for('prod_details', prod_id=prod_id) }}"
+        >{{ prod_name }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h3>No prod yet.</h3>
+  {% endif %}
+
+  <div>
+    <li><a href="{{ url_for('prods_list') }}">See all prods</a><li>
+    <a href="{{ url_for('add') }}">Add prods</a>
+    <p><a href="{{ url_for('root') }}">Базовая страница</a></p>
+  </div>
+
+{% endblock %}

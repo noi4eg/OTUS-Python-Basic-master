@@ -13,26 +13,22 @@
         {% endblock %}
     </title>
 
-    <!-- tag  > class > id > inline > !important -->
-    <!-- а вот так стиль не срабатывает: <link rel="stylesheet" href="style.css" />-->
     <style>
-
-    body{}
-    header{}
-    h1 {
-    margin: 0 0 15px 20px;
-    font-family: var(--bs-font-sans-serif);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 2;
-    color: #212529;
-    background-color: #666666;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    border: 3px solid red;
-    cursor: pointer;
-    }
-
+        body{}
+        header{}
+        h1 {
+        margin: 0 0 15px 20px;
+        font-family: var(--bs-font-sans-serif);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 2;
+        color: #212529;
+        background-color: #20c997;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        border: 3px solid red;
+        cursor: pointer;
+        }
     </style>
 </head>
 
@@ -61,12 +57,12 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{ url_for('root') }}">Home</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('about') }}">About</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('cats_list') }}">List</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('add') }}">Add cat</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('prods_list') }}">List</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('add') }}">Add prod</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Cats is amazing &#9825; </a></li>
+                        
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -89,6 +85,6 @@
 {% endblock %}
 </body>
 <footer style="margin-top: 3em">
-    &copy; hehe
+    &copy; Hello, General Kenobi!
 </footer>
 </html>

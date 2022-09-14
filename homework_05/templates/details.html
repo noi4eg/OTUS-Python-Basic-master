@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Prod #{{ prod_id }}
+{% endblock %}
+
+{% block body %}
+  <h3>Prod#{{ prod_id }} details</h3>
+  <div>Prod name: <strong>{{ prod_name }}</strong></div>
+
+
+  <div>
+    <li><a href="{{ url_for('prods_list') }}">See all prods</a>
+    <li><a href="{{ url_for('add') }}">Add prods</a>
+    <li><a href="{{ url_for('root') }}">Базовая страница</a>
+  </div>
+{% endblock %}
